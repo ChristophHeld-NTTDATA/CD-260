@@ -21,3 +21,6 @@ mta_archives/
 
 # graphify-axet
 .graphify/
+
+# CAP
+.cdsrc-private.json

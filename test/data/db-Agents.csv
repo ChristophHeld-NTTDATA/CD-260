@@ -1,0 +1,6 @@
+ID,name,host,provider,createdAt,createdBy,modifiedAt,modifiedBy
+9e2f3b1a-1f2a-4b3c-8d4e-5f6a7b8c9d01,Weather Agent,https://weather-agent.example.com,SAP,2024-01-10T09:00:00Z,alice,2024-01-10T09:00:00Z,alice
+9e2f3b1a-1f2a-4b3c-8d4e-5f6a7b8c9d02,Sales Assistant,https://sales-agent.example.com,SAP,2024-01-12T10:30:00Z,bob,2024-01-15T14:20:00Z,bob
+9e2f3b1a-1f2a-4b3c-8d4e-5f6a7b8c9d03,Support Bot,https://support-agent.example.com,Custom,2024-02-01T08:15:00Z,carol,2024-02-01T08:15:00Z,carol
+9e2f3b1a-1f2a-4b3c-8d4e-5f6a7b8c9d04,HR Onboarding Agent,https://hr-agent.example.com,SAP,2024-02-20T11:45:00Z,dave,2024-03-01T16:00:00Z,alice
+9e2f3b1a-1f2a-4b3c-8d4e-5f6a7b8c9d05,Finance Insights Agent,https://finance-agent.example.com,Custom,2024-03-05T13:00:00Z,erin,2024-03-05T13:00:00Z,erin
