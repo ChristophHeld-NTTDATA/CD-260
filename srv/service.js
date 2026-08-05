@@ -3,15 +3,15 @@ module.exports = class OrderService extends cds.ApplicationService {
         const {
             Product,
             BusinessPartner,
-            SalesOrder
+            SalesOrders
         } = this.entities;
 
         this.on('READ', Product, async (req) => {
             const pr = await cds.connect.to('API_PRODUCT_SRV');
             return pr.run(req.query);
         })
-        this.on('READ', SalesOrder, async (req) => {
-            const so = await cds.connect.to('sap_s4_OP_SALESORDER_0001_v1');
+        this.on('READ', SalesOrders, async (req) => {
+            const so = await cds.connect.to('API_SALES_ORDER_SRV');
             return so.run(req.query);
         })
         this.on('READ', BusinessPartner, async (req) => {

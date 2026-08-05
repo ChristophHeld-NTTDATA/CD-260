@@ -68,7 +68,7 @@ Authorization: Bearer {{client_credentials_grant.response.body.access_token}}
 
 ### SalesOrder
 # @name SalesOrder_GET
-GET {{server}}/odata/v4/order/SalesOrder
+GET {{server}}/odata/v4/order/SalesOrders?$select=SalesOrder,SalesOrderType&$top=5
 Authorization: Bearer {{client_credentials_grant.response.body.access_token}}
 
 

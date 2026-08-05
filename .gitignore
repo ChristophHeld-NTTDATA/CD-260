@@ -3,6 +3,7 @@ target/
 _out/
 gen/
 .env
+logs
 
 .cdsrc-private.json
 default-*.json

@@ -57,16 +57,9 @@
           }
         }
       },
-      "sap_s4_OP_SALESORDER_0001_v1": {
-        "kind": "odata",
-        "model": "srv/external/sap-s4-OP_SALESORDER_0001-v1",
-        "[production]": {
-          "credentials": {
-            "destination": "odata_backend",
-            "path": "/sap/opu/odata4/sap/api_salesorder/srvd_a2x/sap/api_salesorder/0001",
-            "forwardAuthToken": true
-          }
-        }
+      "API_SALES_ORDER_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_SALES_ORDER_SRV"
       }
     }
   }
