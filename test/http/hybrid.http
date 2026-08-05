@@ -1,7 +1,7 @@
 @server=http://localhost:4004
 @authUrl=https://akkaacqa9.accounts.ondemand.com
 @clientId=e6204651-c418-4e68-b859-c65534868067
-@clientSecret=TODO
+@clientSecret=a.bNC.035RUpEq6mx/oZIHu6dXHxml-
 # IAS user credentials — required for principal propagation
 # Add IAS_USERNAME and IAS_PASSWORD to your local .env file (see .env.example).
 @username={{$dotenv IAS_USERNAME}}

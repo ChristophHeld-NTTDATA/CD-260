@@ -31,12 +31,12 @@ modules:
     requires:
       - name: CD260-connectivity
       - name: CD260-destination
+      - name: CD260-db
       - name: CD260-ias
         parameters:
           config:
             credential-type: X509_GENERATED
             app-identifier: srv
-      - name: CD260-db
 
   - name: CD260-db-deployer
     type: hdb
@@ -64,13 +64,11 @@ resources:
     type: org.cloudfoundry.managed-service
     parameters:
       service: identity
-      service-name: CD260-ias
       service-plan: application
       config:
         provided-apis:
           - name: CD260-ias-api
             description: API exposed by the application
-        display-name: CD260
         oauth2-configuration:
           token-policy:
             access-token-format: "jwt"
@@ -90,7 +88,6 @@ resources:
     parameters:
       service: destination
       service-plan: lite
-
   - name: CD260-html5-repo-host
     type: org.cloudfoundry.managed-service
     parameters:
