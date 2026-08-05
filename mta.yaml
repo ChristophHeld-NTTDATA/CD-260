@@ -96,4 +96,3 @@ resources:
     parameters:
       service: html5-apps-repo
       service-plan: app-host
-

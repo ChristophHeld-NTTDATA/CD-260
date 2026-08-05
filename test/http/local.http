@@ -1,0 +1,71 @@
+@server=http://localhost:4004
+@username=superAdmin
+@password=Itelli2024!
+
+
+### Agents
+# @name Agents_GET
+GET {{server}}/odata/v4/order/Agents
+Authorization: Basic {{username}}:{{password}}
+
+
+### Agents
+# @name Agents_POST
+POST {{server}}/odata/v4/order/Agents
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "27049137-1bbd-4d01-92b2-841da210f3a2",
+  "name": "name-27049137",
+  "host": "host-27049137",
+  "provider": "provider-27049137",
+  "createdAt": "2007-03-21T00:00:00.000Z",
+  "createdBy": "createdBy.g3r8x@example.org",
+  "modifiedAt": "2007-05-30T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.g3r8x@example.com"
+}
+
+
+### Agents
+# @name Agents_PATCH
+PATCH {{server}}/odata/v4/order/Agents/27049137-1bbd-4d01-92b2-841da210f3a2
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "27049137-1bbd-4d01-92b2-841da210f3a2",
+  "name": "name-27049137",
+  "host": "host-27049137",
+  "provider": "provider-27049137",
+  "createdAt": "2007-03-21T00:00:00.000Z",
+  "createdBy": "createdBy.g3r8x@example.org",
+  "modifiedAt": "2007-05-30T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.g3r8x@example.com"
+}
+
+
+### Agents
+# @name Agents_DELETE
+DELETE {{server}}/odata/v4/order/Agents/27049137-1bbd-4d01-92b2-841da210f3a2
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### SalesOrder
+# @name SalesOrder_GET
+GET {{server}}/odata/v4/order/SalesOrder
+Authorization: Basic {{username}}:{{password}}
+
+
+### BusinessPartner
+# @name BusinessPartner_GET
+GET {{server}}/odata/v4/order/BusinessPartner
+Authorization: Basic {{username}}:{{password}}
+
+
+### Product
+# @name Product_GET
+GET {{server}}/odata/v4/order/Product
+Authorization: Basic {{username}}:{{password}}
+

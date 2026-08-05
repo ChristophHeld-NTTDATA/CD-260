@@ -1,0 +1,85 @@
+@server=https://dev-ger-pie-org-cd-260-cd260-srv.cfapps.eu10-005.hana.ondemand.com
+@authUrl=https://akkaacqa9.accounts.ondemand.com
+@clientId=e6204651-c418-4e68-b859-c65534868067
+@clientSecret=TODO
+# IAS user credentials — required for principal propagation
+# Add IAS_USERNAME and IAS_PASSWORD to your local .env file (see .env.example).
+@username={{$dotenv IAS_USERNAME}}
+@password={{$dotenv IAS_PASSWORD}}
+
+
+### OAuth access token request with password grant (ROPC) — user-specific token for principal propagation
+# The returned JWT contains the user subject/email
+# @name client_credentials_grant
+POST {{authUrl}}/oauth2/token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&client_id={{clientId}}&client_secret={{clientSecret}}&username={{username}}&password={{password}}
+
+
+### Agents
+# @name Agents_GET
+GET {{server}}/odata/v4/order/Agents
+Authorization: Bearer {{client_credentials_grant.response.body.access_token}}
+
+
+### Agents
+# @name Agents_POST
+POST {{server}}/odata/v4/order/Agents
+Content-Type: application/json
+Authorization: Bearer {{client_credentials_grant.response.body.access_token}}
+
+{
+  "ID": "27049137-1bbd-4d01-92b2-841da210f3a2",
+  "name": "name-27049137",
+  "host": "host-27049137",
+  "provider": "provider-27049137",
+  "createdAt": "2007-03-21T00:00:00.000Z",
+  "createdBy": "createdBy.g3r8x@example.org",
+  "modifiedAt": "2007-05-30T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.g3r8x@example.com"
+}
+
+
+### Agents
+# @name Agents_PATCH
+PATCH {{server}}/odata/v4/order/Agents/27049137-1bbd-4d01-92b2-841da210f3a2
+Content-Type: application/json
+Authorization: Bearer {{client_credentials_grant.response.body.access_token}}
+
+{
+  "ID": "27049137-1bbd-4d01-92b2-841da210f3a2",
+  "name": "name-27049137",
+  "host": "host-27049137",
+  "provider": "provider-27049137",
+  "createdAt": "2007-03-21T00:00:00.000Z",
+  "createdBy": "createdBy.g3r8x@example.org",
+  "modifiedAt": "2007-05-30T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.g3r8x@example.com"
+}
+
+
+### Agents
+# @name Agents_DELETE
+DELETE {{server}}/odata/v4/order/Agents/27049137-1bbd-4d01-92b2-841da210f3a2
+Content-Type: application/json
+Authorization: Bearer {{client_credentials_grant.response.body.access_token}}
+
+
+### SalesOrder
+# @name SalesOrder_GET
+GET {{server}}/odata/v4/order/SalesOrder
+Authorization: Bearer {{client_credentials_grant.response.body.access_token}}
+
+
+### BusinessPartner
+# @name BusinessPartner_GET
+GET {{server}}/odata/v4/order/BusinessPartner
+Authorization: Bearer {{client_credentials_grant.response.body.access_token}}
+
+
+### Product
+# @name Product_GET
+GET {{server}}/odata/v4/order/Product
+Authorization: Bearer {{client_credentials_grant.response.body.access_token}}
+
