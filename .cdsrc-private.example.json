@@ -1,0 +1,66 @@
+{
+  "requires": {
+    "[hybrid]": {
+      "API_PRODUCT_SRV": {
+        "credentials": {
+          "destination": "odata_backend",
+          "path": "/API_PRODUCT_SRV"
+        }
+      },
+      "API_BUSINESS_PARTNER": {
+        "credentials": {
+          "destination": "odata_backend",
+          "path": "/API_BUSINESS_PARTNER"
+        }
+      },
+      "sap_s4_OP_SALESORDER_0001_v1": {
+        "credentials": {
+          "destination": "odata_backend",
+          "path": "/sap/opu/odata4/sap/api_salesorder/srvd_a2x/sap/api_salesorder/0001"
+        }
+      },
+      "auth": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.eu10-005.hana.ondemand.com",
+          "org": "dev-ger-pie_org",
+          "space": "CD-260",
+          "instance": "CD260-ias",
+          "key": "CD260-ias-key"
+        },
+        "kind": "ias-auth",
+        "vcap": {
+          "name": "auth"
+        }
+      },
+      "destinations": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.eu10-005.hana.ondemand.com",
+          "org": "dev-ger-pie_org",
+          "space": "CD-260",
+          "instance": "CD260-destination",
+          "key": "CD260-destination-key"
+        },
+        "kind": "destinations",
+        "vcap": {
+          "name": "destinations"
+        }
+      },
+      "connectivity": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.eu10-005.hana.ondemand.com",
+          "org": "dev-ger-pie_org",
+          "space": "CD-260",
+          "instance": "CD260-connectivity",
+          "key": "CD260-connectivity-key"
+        },
+        "kind": "connectivity",
+        "vcap": {
+          "name": "connectivity"
+        }
+      }
+    }
+  }
+}

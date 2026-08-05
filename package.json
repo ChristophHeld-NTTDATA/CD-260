@@ -32,7 +32,7 @@
         }
       },
       "[production]": {
-        "auth": "xsuaa"
+        "auth": "ias"
       },
       "connectivity": true,
       "destinations": true,
