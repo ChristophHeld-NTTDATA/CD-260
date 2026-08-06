@@ -3,5 +3,7 @@ using {db} from '../db/schema';
 
 service OrderService {
     entity Agents          as projection on db.Agents;
+
+    //External Service integrated into CAP CDS model
     entity SalesOrders     as projection on so.SalesOrder;
 }

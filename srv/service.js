@@ -1,8 +1,6 @@
 module.exports = class OrderService extends cds.ApplicationService {
     init() {
         const {
-            Product,
-            BusinessPartner,
             SalesOrders
         } = this.entities;
 
