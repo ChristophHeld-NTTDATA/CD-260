@@ -24,5 +24,6 @@ service OrderService {
     ) returns FollowUpTasks;
 }
 
-annotate OrderService with @agent;
 annotate OrderService with @odata;
+annotate OrderService with @agent;
+annotate OrderService.createFollowupTask with @agent.hitl;
