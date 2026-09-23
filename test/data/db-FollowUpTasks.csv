@@ -1,0 +1,6 @@
+ID,salesOrder,title,description,dueDate,priority,status,createdAt,createdBy,modifiedAt,modifiedBy
+3c4d5e6f-2a3b-4c5d-9e0f-1a2b3c4d5e01,0000000001,Confirm expedited shipping,Reach out to logistics to confirm faster delivery is feasible.,2024-01-15,high,inProgress,2024-01-11T09:16:00Z,bob,2024-01-13T11:00:00Z,bob
+3c4d5e6f-2a3b-4c5d-9e0f-1a2b3c4d5e02,0000000001,Review credit limit,Escalate to finance to review the customer's credit limit.,2024-01-18,high,open,2024-01-11T09:21:00Z,bob,2024-01-11T09:21:00Z,bob
+3c4d5e6f-2a3b-4c5d-9e0f-1a2b3c4d5e03,0000000002,Send warranty offer,Prepare and send an extended warranty upsell offer to the customer.,2024-01-20,medium,open,2024-01-14T13:41:00Z,bob,2024-01-14T13:41:00Z,bob
+3c4d5e6f-2a3b-4c5d-9e0f-1a2b3c4d5e04,0000000003,Notify customer of split delivery,Inform the customer about the two separate delivery dates.,2024-02-03,medium,done,2024-02-02T08:31:00Z,carol,2024-02-05T15:20:00Z,carol
+3c4d5e6f-2a3b-4c5d-9e0f-1a2b3c4d5e05,0000000004,Request payment guarantee,Ask sales rep to secure a payment guarantee before shipment.,2024-02-25,high,open,2024-02-21T12:01:00Z,dave,2024-02-21T12:01:00Z,dave
