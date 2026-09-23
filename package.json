@@ -2,6 +2,7 @@
   "name": "CD260",
   "version": "1.0.0",
   "dependencies": {
+    "@cap-js/agents": "^0.9.6",
     "@cap-js/hana": "^2",
     "@sap-cloud-sdk/connectivity": "^4",
     "@sap-cloud-sdk/http-client": "^4",
@@ -34,6 +35,10 @@
       },
       "[production]": {
         "auth": "ias"
+      },
+      "llm": {
+        "kind": "aicore",
+        "model": "gpt-4o"
       },
       "connectivity": true,
       "destinations": true,

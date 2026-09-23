@@ -23,3 +23,6 @@ service OrderService {
         priority    : String(10),
     ) returns FollowUpTasks;
 }
+
+annotate OrderService with @agent;
+annotate OrderService with @odata;
