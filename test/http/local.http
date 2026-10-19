@@ -1,71 +1,36 @@
 @server=http://localhost:4004
-@username=superAdmin
-@password=Itelli2024!
 
+### All flavours
+GET {{server}}/odata/v4/icecream/Flavours
 
-### Agents
-# @name Agents_GET
-GET {{server}}/odata/v4/order/Agents
-Authorization: Basic {{username}}:{{password}}
+### All orders
+GET {{server}}/odata/v4/icecream/Orders
 
+### Top 3 flavours by scoops sold
+GET {{server}}/odata/v4/icecream/Orders?$apply=groupby((flavour_ID),aggregate(scoops with sum as totalScoops))&$orderby=totalScoops desc&$top=3
 
-### Agents
-# @name Agents_POST
-POST {{server}}/odata/v4/order/Agents
+### Create a new flavour
+POST {{server}}/odata/v4/icecream/Flavours
 Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "27049137-1bbd-4d01-92b2-841da210f3a2",
-  "name": "name-27049137",
-  "host": "host-27049137",
-  "provider": "provider-27049137",
-  "createdAt": "2007-03-21T00:00:00.000Z",
-  "createdBy": "createdBy.g3r8x@example.org",
-  "modifiedAt": "2007-05-30T00:00:00.000Z",
-  "modifiedBy": "modifiedBy.g3r8x@example.com"
+  "ID": 11,
+  "name": "Blueberry Cheesecake",
+  "category": "fruity",
+  "colour": "purple",
+  "pricePerScoop": 2.7,
+  "vegan": false,
+  "stock": 20,
+  "rating": 4
 }
 
-
-### Agents
-# @name Agents_PATCH
-PATCH {{server}}/odata/v4/order/Agents/27049137-1bbd-4d01-92b2-841da210f3a2
+### Change the stock of a flavour
+PATCH {{server}}/odata/v4/icecream/Flavours(11)
 Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "27049137-1bbd-4d01-92b2-841da210f3a2",
-  "name": "name-27049137",
-  "host": "host-27049137",
-  "provider": "provider-27049137",
-  "createdAt": "2007-03-21T00:00:00.000Z",
-  "createdBy": "createdBy.g3r8x@example.org",
-  "modifiedAt": "2007-05-30T00:00:00.000Z",
-  "modifiedBy": "modifiedBy.g3r8x@example.com"
+  "stock": 5
 }
 
-
-### Agents
-# @name Agents_DELETE
-DELETE {{server}}/odata/v4/order/Agents/27049137-1bbd-4d01-92b2-841da210f3a2
-Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
-
-
-### SalesOrder
-# @name SalesOrder_GET
-GET {{server}}/odata/v4/order/SalesOrder
-Authorization: Basic {{username}}:{{password}}
-
-
-### BusinessPartner
-# @name BusinessPartner_GET
-GET {{server}}/odata/v4/order/BusinessPartner
-Authorization: Basic {{username}}:{{password}}
-
-
-### Product
-# @name Product_GET
-GET {{server}}/odata/v4/order/Product
-Authorization: Basic {{username}}:{{password}}
-
+### Delete a flavour
+DELETE {{server}}/odata/v4/icecream/Flavours(11)

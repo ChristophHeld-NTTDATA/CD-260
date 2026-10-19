@@ -1,0 +1,11 @@
+ID,name,category,colour,pricePerScoop,vegan,stock,rating
+1,Vanilla,creamy,white,2.00,false,40,4
+2,Chocolate,chocolate,brown,2.20,false,35,5
+3,Strawberry,fruity,pink,2.20,false,25,4
+4,Mint Choc Chip,chocolate,green,2.50,false,18,3
+5,Lemon Sorbet,sorbet,yellow,2.00,true,30,3
+6,Mango Sorbet,sorbet,orange,2.40,true,22,5
+7,Bubblegum,creamy,blue,2.60,false,12,5
+8,Cookie Dough,chocolate,beige,2.80,false,15,5
+9,Raspberry Ripple,fruity,red,2.40,false,20,4
+10,Coconut Dream,creamy,white,2.60,true,10,2

@@ -29,8 +29,6 @@ modules:
           srv-url: ${default-url}
           srv-cert-url: '${protocol}://${default-host}.cert.${default-domain}'
     requires:
-      - name: CD260-connectivity
-      - name: CD260-destination
       - name: CD260-db
       - name: CD260-ias
         parameters:
@@ -78,16 +76,6 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
-  - name: CD260-connectivity
-    type: org.cloudfoundry.managed-service
-    parameters:
-      service: connectivity
-      service-plan: lite
-  - name: CD260-destination
-    type: org.cloudfoundry.managed-service
-    parameters:
-      service: destination
-      service-plan: lite
   - name: CD260-html5-repo-host
     type: org.cloudfoundry.managed-service
     parameters:
