@@ -36,11 +36,4 @@ Content-Type: application/json
 DELETE {{server}}/odata/v4/icecream/Flavours(11)
 
 ### Order an ice cream (creates an order and reduces the stock)
-POST {{server}}/odata/v4/icecream/orderIceCream
-Content-Type: application/json
-
-{
-  "flavour": 2,
-  "customerName": "Tom",
-  "scoops": 2
-}
+GET {{server}}/odata/v4/icecream/orderIceCream(flavour=2,customerName='Tom',scoops=2)
